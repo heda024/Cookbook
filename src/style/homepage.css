@@ -2,3 +2,70 @@
 	border-bottom: 3px solid var(--main-orange);
 	width: 60;
 }
+
+.search-section{
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	height: 400px;
+}
+
+.searchbar-content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	transform: translateY(90px);
+	gap: 1rem;
+
+}
+
+h1{
+	font-family: 'inter light';
+	z-index: 2;
+	color: white;
+	text-shadow: 2px 2px var(--light-grey);
+	font-size: 50px;
+}
+
+.searchbar{
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.search-section button{
+	position: relative;
+	background-color: var(--main-orange);
+	border: none;
+	border-radius: 10px;
+	width: 80px;
+	height: 50px;
+	/* transform: translate(-90px, 305px); */
+	z-index: 2;
+	cursor: pointer;
+}
+.searchbtnimg{
+	width: 35px;
+	height: 35px;
+}
+
+.search-image{
+	height: 400px;
+	width: 1200px;
+	position: absolute;
+	z-index: 0;
+}
+input{
+	position: relative;
+	z-index: 1;
+	height: 60px;
+	width: 750px;
+	font-size: 25px;
+	/* transform: translateY(300px); */
+}
+
+::placeholder{
+	font-size: 25px;
+	margin-left: 10px;
+}
