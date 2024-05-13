@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+a{
+	text-decoration: none;
+}
+
 /* navbar */
 
 nav{
@@ -40,7 +44,6 @@ a img{
 	font-family: 'inter';
 	flex-basis: 50%;
 	width: 50px;
-	text-decoration: none;
 	color: var(--light-grey);
 	font-size: 20px;
 }
@@ -76,4 +79,6 @@ a img{
 	width: 20px;
 	transform: translateY(-5px);
 }
+
+
 
