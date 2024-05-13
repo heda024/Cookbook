@@ -43,7 +43,6 @@ a img{
 .navigation a{
 	font-family: 'inter';
 	flex-basis: 50%;
-	width: 50px;
 	color: var(--light-grey);
 	font-size: 20px;
 }
@@ -68,8 +67,10 @@ a img{
 	gap: 5px;
 }
 .saved-recipes span{
+	width: 100px;
 	font-family: 'inter';
 	font-size: 15px;
+	transform: translateX(-15px);
 }
 .saved-recipes:hover{
 	background-color: var(--alternative-orange);
@@ -77,7 +78,7 @@ a img{
 .bookmark{
 	height: 20px;
 	width: 20px;
-	transform: translateY(-5px);
+	transform: translate(-15px, -5px)
 }
 
 
