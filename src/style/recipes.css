@@ -2,3 +2,56 @@
 	border-bottom: 3px solid var(--main-orange);
 	width: 75px;
 }
+
+h2{
+	font-family: 'inter';
+}
+
+h2 img{
+	height: 25px;
+	width: 25px;
+}
+
+
+
+.show-recipes{
+	display: flex;
+	flex-direction: row;
+}
+
+.sidebar{
+	flex-basis: 20%;
+	height: 100vh;
+	display: flex;
+	border-right: 1px solid var(--light-grey);
+	
+}
+
+.filters{
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-top: 2rem;
+	margin-left: 2rem;
+}
+
+.filters span{
+	margin-left: 2rem;
+	cursor: pointer;
+}
+
+.arrow{
+	width: 15px;
+	height: 15px;
+}
+
+.all-recipes{
+	flex-basis: 80%;
+	height: 100vh;
+}
+
+h3{
+	color: var(--main-orange);
+	font-family: 'inter';
+	margin: 1rem 0 0 1rem;
+}

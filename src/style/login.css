@@ -31,5 +31,6 @@ label{
 	border: none;
 	border-radius: 10px;
 	font-family: 'inter';
+	cursor: pointer;
 }
 

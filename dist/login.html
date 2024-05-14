@@ -25,19 +25,30 @@
 		</a>
 	</nav>
 
-	<section class="login">
+	<form class="login">
 		<h1>Please sign up or log in to get access to our recipes</h1>
 		<div class="login-input">
-			<label for="username">Username</label>
-			<input type="text" name="username">
+			<label for="email">E-mail</label>
+			<input type="email" name="email" class="email-input">
+			<p class="email-error"></p>
 			<label for="password">Password</label>
-			<input type="password">
+			<input type="password" name="password" class="password-input">
+			<p class="password-error"></p>
 		</div>
-		<button class="loginbtn">Log in/sign up</button>
-	</section>
+		<div class="buttons">
+			<button class="loginbtn">Log in</button>
+			<button class="loginbtn">Sign up</button>
+			<p class="submission-error"></p>
+		</div>
+		
+	</form>
 
-	<script src="../src/script/login.js"></script>
+	<script src="../src/script/login.js" type="module"></script>
 </body>
+
+
+
+
 <footer>
 	<img src="../src/assets/images/Final logo.png" alt="logo">
 </footer>

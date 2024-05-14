@@ -69,3 +69,9 @@ input{
 	font-size: 25px;
 	margin-left: 10px;
 }
+
+/* Recent recipes section */
+
+.recent-recipes{
+	height: 100vh;
+}
