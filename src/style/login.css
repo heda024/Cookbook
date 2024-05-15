@@ -4,8 +4,8 @@
 	gap: 3rem;
 	justify-content: center;
 	align-items: center;
-	
 	height: 80vh;
+	display: none;
 }
 .login-input{
 	text-align: center;
@@ -22,6 +22,17 @@ label{
 	font-family: 'inter';
 }
 
+.sign-up-form-open{
+	background: none;
+	border: none;
+	font-family: 'inter';
+	cursor: pointer;
+}
+
+.sign-up-form-open:hover{
+	border-bottom: 1px solid black;
+}
+
 .loginbtn{
 	width: 190px;
 	height: 55px;
@@ -35,6 +46,51 @@ label{
 }
 
 .loginbtn:hover{
+	background-color: var(--alternative-orange);
+}
+
+/* Sign up */
+
+.sign-up-form-close{
+	background-color: var(--main-orange);
+	color: white;
+	width: 30px;
+	font-weight: bold;
+	height: 30px;
+	border: none;
+	border-radius: 50%;
+}
+
+.sign-up-form-container{
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	justify-content: center;
+	align-items: center;
+	height: 80vh;
+}
+
+.sign-up-form{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: center;
+}
+
+.signup-btn{
+	width: 190px;
+	height: 55px;
+	background-color: var(--main-orange);
+	color: white;
+	font-size: 20px;
+	border: none;
+	border-radius: 10px;
+	font-family: 'inter';
+	cursor: pointer;
+}
+
+.signup-btn:hover{
 	background-color: var(--alternative-orange);
 }
 
