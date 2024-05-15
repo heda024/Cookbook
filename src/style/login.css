@@ -34,3 +34,7 @@ label{
 	cursor: pointer;
 }
 
+.loginbtn:hover{
+	background-color: var(--alternative-orange);
+}
+

@@ -21,7 +21,7 @@ nav{
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	gap: 450px;
+	gap: 400px;
 	margin-top: 10px;
 }
 
@@ -53,15 +53,20 @@ a img{
 
 /* saved recipes button */
 
+.buttons{
+	display: flex;
+	flex: row;
+	gap: 1rem;
+}
+
 .saved-recipes{
 	background-color: var(--main-orange);
 	color: white;
 	border: none;
 	border-radius: 10px;
 	height: 80%;
-	width: 200px;
+	width: 160px;
 	font-size: 20px;
-	margin-right: 10px;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -80,6 +85,26 @@ a img{
 	height: 20px;
 	width: 20px;
 	transform: translate(-15px, -5px)
+}
+
+.sign-out-btn{
+	background-color: none;
+	color: var(--main-orange);
+	border: none;
+	border-radius: 10px;
+	height: 30px;
+	width: 80px;
+	font-size: 15px;
+	font-family: inter;
+	margin-right: 10px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sign-out-btn:hover{
+	background-color: var(--light-grey);
 }
 
 /* footer */
