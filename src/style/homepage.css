@@ -32,9 +32,10 @@ h1{
 	display: flex;
 	align-items: center;
 	gap: 1rem;
+	justify-content: center;
 }
 
-.search-section button{
+.searchbtn{
 	position: relative;
 	background-color: var(--main-orange);
 	border: none;
@@ -45,6 +46,11 @@ h1{
 	z-index: 2;
 	cursor: pointer;
 }
+
+.searchbtn:hover{
+	background-color: var(--alternative-orange);
+}
+
 .searchbtnimg{
 	width: 35px;
 	height: 35px;
@@ -62,7 +68,13 @@ input{
 	height: 60px;
 	width: 750px;
 	font-size: 25px;
+	outline: none;
 	/* transform: translateY(300px); */
+}
+
+
+.searchbtn{
+
 }
 
 ::placeholder{
