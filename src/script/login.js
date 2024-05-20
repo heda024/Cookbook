@@ -110,6 +110,7 @@ function signInUser(){
 		emailError, 
 		passwordError
 		);
+		console.log('Form status:', signInFormStatus());
 		if(signInFormStatus()){
 			return
 		} else {
@@ -121,14 +122,12 @@ function signInUser(){
 				window.location.href = "homepage.html"; 
 			})
 			.catch((error) => {
-				submissionError.textContent = 'something went wrong'
+				submissionError.textContent = error.message
 			})
 	}
 }
 
-signInButton.addEventListener('click', (e)=>{
-	e.preventDefault();
-	signInUser();
-})
-
-export {signOutUser}
+signInButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    signInUser();
+});
