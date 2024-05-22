@@ -73,9 +73,7 @@ input{
 }
 
 
-.searchbtn{
 
-}
 
 ::placeholder{
 	font-size: 25px;
@@ -109,7 +107,23 @@ input{
 
 /* Recent recipes section */
 
-.recent-recipes{
+.notFound{
+	grid-template-columns: 1fr!important;
+	color: var(--main-orange);
+	font-size: 1.8rem;
+	font-family: 'inter';
+	width: 100%;
+	
+}
+
+.search-result-title{
+	padding: 2rem;
+	display: flex;
+	justify-content: center;
+}
+
+
+.search-result{
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-auto-rows: minmax(380px, auto);
@@ -123,12 +137,15 @@ input{
 	align-items: center;
 	flex-direction: column;
 	gap: 1rem;
+	box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+	border-radius: 10px;
 }
 
 .meal-image{
 	background-color: darksalmon;
 	width: 100%;
 	height: 75%;
+	border-radius: 10px;
 }
 
 .meal-image img{
@@ -171,4 +188,59 @@ input{
 	height: 30px;
 	width: 30px;
 	
+}
+
+/* meal details */
+
+.meal-deatils{
+	display: none;
+	width: 70%;
+	height: 80%;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--main-orange);
+	color: white;
+	border-radius: 10px;
+	overflow-y: scroll;
+}
+
+.close-details{
+	width: 3%;
+	border-radius: 50%;
+	border: none;
+	padding: 0.5rem;
+	margin-top: 0.5rem;
+	background-color: white;
+	color: var(--main-orange);
+	font-family: 'inter';
+	cursor: pointer;
+	position: absolute;
+	right: 2rem;
+}
+.close-details:hover{
+	background-color: var(--alternative-orange);
+	color: white;
+
+}
+
+.meal-details-content{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	gap: 1rem;
+	padding: 1rem;
+
+}
+
+
+.recipe-image{
+	width: 50%;
+	height: auto;
+}
+/* JS related */
+
+.showRecipe{
+	display: block;
 }
