@@ -31,8 +31,7 @@ const closeSignup = document.querySelector('.sign-up-form-close')
 const openSignup = document.querySelector('.sign-up-form-open')
 const signupContainer = document.querySelector('.sign-up-form-container')
 
-// SIGN OUT ELEMENT
-const signoutBtn = document.querySelector('.sign-out-btn')
+
 
 
 // Open sign up
@@ -96,10 +95,10 @@ function signOutUser() {
 	.catch((error) => console.log(error.message))
 }
 
-signoutBtn.addEventListener('click', (e)=>{
-	e.preventDefault();
-	signOutUser();
-})
+// signoutBtn.addEventListener('click', (e)=>{
+// 	e.preventDefault();
+// 	signOutUser();
+// })
 
 // HANDLE SIGN IN
 
@@ -123,6 +122,7 @@ function signInUser(){
 			})
 			.catch((error) => {
 				submissionError.textContent = error.message
+				console.log(error);
 			})
 	}
 }
