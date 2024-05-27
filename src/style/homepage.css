@@ -73,8 +73,6 @@ input{
 }
 
 
-
-
 ::placeholder{
 	font-size: 25px;
 	margin-left: 10px;
@@ -113,7 +111,6 @@ input{
 	font-size: 1.8rem;
 	font-family: 'inter';
 	width: 100%;
-	
 }
 
 .search-result-title{
@@ -162,12 +159,15 @@ input{
 	width: 100%;
 }
 
-.meal-name{
+
+.meal-name-button{
 	margin-left: 0.5rem;
-	font-size: 25px;
-	width: 75%;
+	width: 95%;
 	display: flex;
-	
+	background: none;
+	border: none;
+	font-size: 25px;
+	cursor: pointer;
 }
 
 .save-meal{
@@ -192,8 +192,7 @@ input{
 
 /* meal details */
 
-.meal-deatils{
-	display: none;
+.meal-details{
 	width: 70%;
 	height: 80%;
 	position: fixed;
@@ -204,6 +203,12 @@ input{
 	color: white;
 	border-radius: 10px;
 	overflow-y: scroll;
+}
+.hideRecipe{
+	display: none;
+}
+.showRecipe{
+	display: block;
 }
 
 .close-details{
@@ -239,8 +244,5 @@ input{
 	width: 50%;
 	height: auto;
 }
-/* JS related */
 
-.showRecipe{
-	display: block;
-}
+

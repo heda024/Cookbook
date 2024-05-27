@@ -1,0 +1,50 @@
+.contact-nav{
+	border-bottom: 3px solid var(--main-orange);
+	width: 60;
+}
+
+.form-container{
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+
+}
+.idea-form{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	gap: 1rem;
+	text-align: center;
+	padding: 2rem;
+	background-color: var(--main-orange);
+	border-radius: 20px;
+}
+
+.idea-form p{
+	font-size: 25px;
+	color: white;
+	font-family: 'inter';
+}
+
+.input{
+	display: flex;
+	flex-direction: column;
+}
+
+label{
+	font-size: 20px;
+}
+
+input{
+	height: 2rem;
+	font-size: 20px;
+}
+
+textarea{
+	font-size: 20px;
+}
+
+::placeholder{
+	font-size: 20px;
+	margin-left: 10px;
+}
