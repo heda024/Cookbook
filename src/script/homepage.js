@@ -1,6 +1,7 @@
 const searchBtn = document.querySelector('.searchbtn')
 const searchBar = document.querySelector('.search-bar')
 const signOutBtn = document.querySelector('.sign-out-btn')
+const categoryButtons = document.querySelectorAll('.category-button');
 
 // Detail elements
 const searchResults = document.querySelector('.search-result')
@@ -16,10 +17,18 @@ signOutBtn.addEventListener('click', () => {
 
 searchBtn.addEventListener('click', getSearchResults)
 
+categoryButtons.forEach(button => {
+	button.addEventListener('click', () => {
+		const category = button.getAttribute('data-category');
+		getCategoryResults(category);
+	});
+});
+
 searchResults.addEventListener('click', getMealRecipe)
 
 recipeCloseBtn.addEventListener('click', () => {
     mealDetailsContent.parentElement.classList.remove('showRecipe');})
+
 
 
 // Get search results 
@@ -52,6 +61,34 @@ function getSearchResults() {
 		console.error('Error:', error);
 	});
 }
+
+	// Get category results
+	function getCategoryResults(category) {
+		fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
+			.then(response => response.json())
+			.then(data => {
+				let html = '';
+				if (data.meals) {
+					data.meals.forEach(meal => {
+						html += `
+						<div data-id="${meal.idMeal}" class="meal-item">
+							<div class="meal-image">
+								<img src="${meal.strMealThumb}" alt="">
+							</div>
+							<button class='meal-name-button'>${meal.strMeal}</button>
+						</div>`;
+						searchResults.classList.remove('notFound');
+					});
+				} else {
+					html = "Sorry, no recipes found";
+					searchResults.classList.add('notFound');
+				}
+				searchResults.innerHTML = html;
+			})
+			.catch(error => {
+				console.error('Error:', error);
+			});
+	}
 
 
 // Get recipe for the chosen meal
