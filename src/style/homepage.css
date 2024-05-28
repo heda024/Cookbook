@@ -4,20 +4,19 @@
 }
 
 .search-section{
-	margin-top: 20px;
 	display: flex;
 	justify-content: center;
-	height: 400px;
+	height: 150vh;
+	max-height: 400px;
 }
 
 .searchbar-content{
+	width: 80%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
-	transform: translateY(90px);
 	gap: 1rem;
-
 }
 
 h1{
@@ -29,6 +28,7 @@ h1{
 }
 
 .searchbar{
+	width: 100%;
 	display: flex;
 	align-items: center;
 	gap: 1rem;
@@ -57,16 +57,19 @@ h1{
 }
 
 .search-image{
-	height: 400px;
-	width: 1200px;
+	height: auto;
+	min-height: 200px;
+	max-height: 400px;
+	width: 100%;
+	max-width: 1200px;
 	position: absolute;
 	z-index: 0;
 }
-input{
+.search-bar{
 	position: relative;
 	z-index: 1;
 	height: 60px;
-	width: 750px;
+	width: 70%;
 	font-size: 25px;
 	outline: none;
 	/* transform: translateY(300px); */
@@ -86,6 +89,7 @@ input{
 	font-size: 25px;
 }
 .recipe-categories{
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	gap: 120px;
@@ -180,26 +184,6 @@ input{
 	cursor: pointer;
 }
 
-.save-meal{
-	width: 15%;
-	height: 40px;
-	background: var(--light-grey);
-	border: none;
-	border-radius: 10px;
-	cursor: pointer;
-	
-
-}
-.save-meal:hover{
-	background-color: var(--dark-grey);
-}
-
-.save-meal img{
-	height: 30px;
-	width: 30px;
-	
-}
-
 /* meal details */
 
 .meal-details{
@@ -256,3 +240,69 @@ input{
 }
 
 
+@media screen and (min-width: 600px) and (max-width: 1025px){
+	.search-section{
+		height: 75vh;
+	}
+	.searchbtn{
+		width: 50px;
+		height: 50px;
+	}
+	.search-image{
+		width: 80%;
+	}
+	h1{
+		font-size: 40px;
+	}
+	.category-button{
+		font-size: 20px;
+	}
+	.recipe-categories{
+		gap: 100px;
+		padding: 1rem;
+	}
+	
+}
+
+@media screen and (max-width: 599px){
+	.searchbar-content{
+		width: 100%;
+	}
+	.search-section{
+		height: 20vh;
+	}
+	.searchbtn{
+		width: 50px;
+		height: 50px;
+	}
+	.searchbtnimg{
+		width: 30px;
+		height: 30px;
+	}
+	.search-image{
+		width: 100%;
+	}
+	.search-bar{
+		height: 40px;
+	}
+	h1{
+		font-size: 25px;
+	}
+	.category-button{
+		font-size: 15px;
+	}
+	.recipe-categories{
+		gap: 30px;
+		padding: 1rem;
+	}
+
+	.search-result{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: minmax(400px, auto);
+		gap: 1rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		margin-top: 2rem;
+	}
+}
