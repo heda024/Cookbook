@@ -4,30 +4,32 @@ const signOutBtn = document.querySelector('.sign-out-btn')
 const categoryButtons = document.querySelectorAll('.category-button');
 
 // Detail elements
+const allRecipes = document.querySelector('.all-recipes')
 const searchResults = document.querySelector('.search-result')
 const mealDetailsContent = document.querySelector('.meal-details-content')
 const recipeCloseBtn = document.querySelector('.close-details')
 const mealItem = document.querySelector('.meal-item')
 
 
-// Event listeners
+// Event listener sign out
 signOutBtn.addEventListener('click', () => {
 	window.location.href = "login.html"; 
 })
-
+// Event listener search function
 searchBtn.addEventListener('click', getSearchResults)
-
+// Event listener get recipe by category
 categoryButtons.forEach(button => {
 	button.addEventListener('click', () => {
 		const category = button.getAttribute('data-category');
 		getCategoryResults(category);
 	});
 });
-
+// Event listener get recipe details
 searchResults.addEventListener('click', getMealRecipe)
-
+// Event listener close recipe details 
 recipeCloseBtn.addEventListener('click', () => {
     mealDetailsContent.parentElement.classList.remove('showRecipe');})
+
 
 
 
@@ -62,8 +64,10 @@ function getSearchResults() {
 	});
 }
 
-	// Get category results
-	function getCategoryResults(category) {
+
+
+// Get category results
+function getCategoryResults(category) {
 		fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
 			.then(response => response.json())
 			.then(data => {
@@ -91,8 +95,8 @@ function getSearchResults() {
 	}
 
 
-// Get recipe for the chosen meal
 
+// Get recipe for the chosen meal
 function getMealRecipe(e){
 	e.preventDefault();
 	if(e.target.classList.contains('meal-name-button')){
@@ -106,7 +110,7 @@ function getMealRecipe(e){
 	};
 }
 
-// Create modal 
+// Create modal for getting recipe
 function mealRecipeModal(meal){
 	console.log(meal);
 	meal = meal[0];

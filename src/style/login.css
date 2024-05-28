@@ -102,3 +102,11 @@ label{
 	background-color: var(--alternative-orange);
 }
 
+@media screen and (min-width: 600px) and (max-width: 1025px){
+
+}
+
+@media screen and (max-width: 599px){
+	
+}
+

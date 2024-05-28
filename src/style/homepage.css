@@ -79,28 +79,34 @@ input{
 }
 
 /* Category buttons */
-
+.category-title{
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+	font-size: 25px;
+}
 .recipe-categories{
 	display: flex;
 	justify-content: center;
 	gap: 120px;
 	padding: 2rem;
+	background-color: var(--alternative-orange);
 }
 
 .category-button{
-	font-size: 20px;
+	font-size: 25px;
+	font-weight: 600;
 	background: none;
 	border: none;
 	cursor: pointer;
 	font-family: 'inter';
-	color: var(--dark-grey);
+	color: white;
 }
 .category-button:hover{
 	color: var(--main-orange);
 }
 .category-button:focus{
-	border-bottom: 2px solid var(--main-orange);
-	color: var(--main-orange);
+	border-bottom: 4px solid var(--main-orange);
 }
 
 
@@ -130,6 +136,7 @@ input{
 	gap: 2rem;
 	padding-left: 2rem;
 	padding-right: 2rem;
+	margin-top: 2rem;
 }
 
 .meal-item{

@@ -21,7 +21,7 @@ nav{
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	gap: 400px;
+	
 	margin-top: 10px;
 }
 
@@ -45,7 +45,7 @@ a img{
 .navigation a{
 	font-family: 'inter';
 	flex-basis: 50%;
-	color: var(--light-grey);
+	color: black;
 	font-size: 20px;
 	width: fit-content;
 	white-space: nowrap;
@@ -69,9 +69,10 @@ a img{
 	border: none;
 	border-radius: 10px;
 	height: 30px;
-	width: 80px;
-	font-size: 15px;
-	font-family: inter;
+	width: fit-content;
+	font-size: 20px;
+	padding: 1rem;
+	font-family: 'inter';
 	margin-right: 15px;
 	cursor: pointer;
 	display: flex;
@@ -94,6 +95,33 @@ footer{
 
 footer img{
 	width: 200px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1025px){
+	a img{
+		width: 175px;
+		height: auto;
+		margin: 10px 0 0 30px;
+	}
+}
+
+@media screen and (max-width: 599px){
+	a img{
+		width: 125px;
+		height: auto;
+		margin: 5px 0 0 15px;
+	}
+
+	.navigation a{
+		
+		font-size: 15px;
+		
+	}
+
+	.sign-out-btn{
+		font-size: 15px;
+		padding: 0.25rem;
+	}
 }
 
 
