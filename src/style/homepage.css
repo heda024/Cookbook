@@ -243,15 +243,17 @@ h2{
 	color: var(--main-orange);
 	font-family: 'inter';
 }
+.ingredient{
+	font-size: 20px;
+}
 .recipe-instruct{
 	gap: 1rem;
 }
 h3{
 	font-family: 'inter';
+	font-size: 20px;
 }
-.instructions{
 
-}
 
 .recipe-image{
 	width: 50%;
@@ -259,7 +261,7 @@ h3{
 }
 
 
-@media screen and (min-width: 600px) and (max-width: 1025px){
+@media screen and (min-width: 900px) and (max-width: 1025px){
 	.search-section{
 		height: 75vh;
 	}
@@ -270,6 +272,10 @@ h3{
 	.search-image{
 		width: 80%;
 	}
+	.close-details{
+		width: 40px;
+		height: 40px;
+	}
 	h1{
 		font-size: 40px;
 	}
@@ -279,6 +285,58 @@ h3{
 	.recipe-categories{
 		gap: 100px;
 		padding: 1rem;
+	}
+	.meal-details{
+		width: 90%;
+	}
+	.meal{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-auto-rows: minmax(400px, auto);
+		gap: 1rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		margin-top: 2rem;
+	}
+	
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px){
+	.search-section{
+		height: 75vh;
+	}
+	.searchbtn{
+		width: 50px;
+		height: 50px;
+	}
+	.search-image{
+		width: 80%;
+	}
+	.close-details{
+		width: 40px;
+		height: 40px;
+	}
+	h1{
+		font-size: 40px;
+	}
+	.category-button{
+		font-size: 20px;
+	}
+	.recipe-categories{
+		gap: 100px;
+		padding: 1rem;
+	}
+	.meal-details{
+		width: 90%;
+	}
+	.meal{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-auto-rows: minmax(400px, auto);
+		gap: 1rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		margin-top: 2rem;
 	}
 	
 }
@@ -304,6 +362,10 @@ h3{
 	.search-bar{
 		height: 40px;
 	}
+	.close-details{
+		width: 30px;
+		height: 30px;
+	}
 	h1{
 		font-size: 25px;
 	}
@@ -311,11 +373,11 @@ h3{
 		font-size: 15px;
 	}
 	.recipe-categories{
-		gap: 30px;
+		gap: 20px;
 		padding: 1rem;
 	}
 
-	.search-result{
+	.meal{
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-auto-rows: minmax(400px, auto);
@@ -323,5 +385,8 @@ h3{
 		padding-left: 1rem;
 		padding-right: 1rem;
 		margin-top: 2rem;
+	}
+	.meal-details{
+		width: 90%;
 	}
 }
