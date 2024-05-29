@@ -121,9 +121,32 @@ function mealRecipeModal(meal){
 	let recipeHtml = `
 				<h2 class="recipe-title">${meal.strMeal}</h2>
 				<p class="recipe-category">${meal.strCategory}</p>
+				<h3>Ingredients</h3>
+				<div class='ingredients'>
+					<div class='ingredient'>${meal.strIngredient1}</div>
+					<div class='ingredient'>${meal.strIngredient2}</div>
+					<div class='ingredient'>${meal.strIngredient3}</div>
+					<div class='ingredient'>${meal.strIngredient4}</div>
+					<div class='ingredient'>${meal.strIngredient5}</div>
+					<div class='ingredient'>${meal.strIngredient6}</div>
+					<div class='ingredient'>${meal.strIngredient7}</div>
+					<div class='ingredient'>${meal.strIngredient8}</div>
+					<div class='ingredient'>${meal.strIngredient9}</div>
+					<div class='ingredient'>${meal.strIngredient10}</div>
+					<div class='ingredient'>${meal.strIngredient11}</div>
+					<div class='ingredient'>${meal.strIngredient12}</div>
+					<div class='ingredient'>${meal.strIngredient13}</div>
+					<div class='ingredient'>${meal.strIngredient14}</div>
+					<div class='ingredient'>${meal.strIngredient15}</div>
+					<div class='ingredient'>${meal.strIngredient16}</div>
+					<div class='ingredient'>${meal.strIngredient17}</div>
+					<div class='ingredient'>${meal.strIngredient18}</div>
+					<div class='ingredient'>${meal.strIngredient19}</div>
+					<div class='ingredient'>${meal.strIngredient20}</div>
+				</div>
 				<div class="recipe-instruct">
 					<h3>Instructions:</h3>
-					<p>${meal.strInstructions}</p>
+					<p class='instructions'>${meal.strInstructions}</p>
 				</div>
 				<div class="recipe-img">
 					<img src="${meal.strMealThumb}" alt="" class="recipe-image">
