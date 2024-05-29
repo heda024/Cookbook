@@ -4,9 +4,10 @@ const signOutBtn = document.querySelector('.sign-out-btn')
 const categoryButtons = document.querySelectorAll('.category-button');
 
 // Detail elements
-const allRecipes = document.querySelector('.all-recipes')
+const mealList = document.querySelector('.meal')
 const searchResults = document.querySelector('.search-result')
 const mealDetailsContent = document.querySelector('.meal-details-content')
+const mealDetails = document.querySelector('.meal-details')
 const recipeCloseBtn = document.querySelector('.close-details')
 const mealItem = document.querySelector('.meal-item')
 
@@ -24,11 +25,14 @@ categoryButtons.forEach(button => {
 		getCategoryResults(category);
 	});
 });
+
 // Event listener get recipe details
-searchResults.addEventListener('click', getMealRecipe)
+mealList.addEventListener('click', getMealRecipe)
+
 // Event listener close recipe details 
 recipeCloseBtn.addEventListener('click', () => {
-    mealDetailsContent.parentElement.classList.remove('showRecipe');})
+    mealDetailsContent.parentElement.classList.remove('showRecipe');
+	mealDetailsContent.parentElement.classList.add('hideRecipe')})
 
 
 
@@ -50,14 +54,14 @@ function getSearchResults() {
 					</div>
 					<button class='meal-name-button'>${meal.strMeal}</button>
 				</div>`
-				searchResults.classList.remove('notFound')
+				mealList.classList.remove('notFound')
 			})
 		}else{
 			html = "Sorry, no recipes found"
-			searchResults.classList.add('notFound')
+			mealList.classList.add('notFound')
 		
 		}
-		searchResults.innerHTML = html;
+		mealList.innerHTML = html;
 	})
 	.catch(error => {
 		console.error('Error:', error);
@@ -85,9 +89,9 @@ function getCategoryResults(category) {
 					});
 				} else {
 					html = "Sorry, no recipes found";
-					searchResults.classList.add('notFound');
+					mealList.classList.add('notFound');
 				}
-				searchResults.innerHTML = html;
+				mealList.innerHTML = html;
 			})
 			.catch(error => {
 				console.error('Error:', error);
@@ -114,7 +118,7 @@ function getMealRecipe(e){
 function mealRecipeModal(meal){
 	console.log(meal);
 	meal = meal[0];
-	let html = `
+	let recipeHtml = `
 				<h2 class="recipe-title">${meal.strMeal}</h2>
 				<p class="recipe-category">${meal.strCategory}</p>
 				<div class="recipe-instruct">
@@ -125,10 +129,7 @@ function mealRecipeModal(meal){
 					<img src="${meal.strMealThumb}" alt="" class="recipe-image">
 				</div>
 	`;
-	
-	mealDetailsContent.innerHTML = html;
-	mealDetailsContent.parentElement.classList.add('showRecipe')
-	mealDetailsContent.parentElement.classList.remove('hideRecipe')
-
-	
+	mealDetailsContent.innerHTML = recipeHtml;
+	mealDetails.classList.add('showRecipe')
+	mealDetails.classList.remove('hideRecipe')	
 }
