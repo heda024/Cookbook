@@ -85,15 +85,15 @@ signupBtn.addEventListener('click', (e) => {
 
 // HANDLE SIGN OUT
 
-function signOutUser() {
-	signOut(authService)
-	.then(()=>{
-		signupContainer.style.display = 'none';
-		signInForm.style.display = 'flex';
-		window.location.href = "login.html";
-	})
-	.catch((error) => console.log(error.message))
-}
+// function signOutUser() {
+// 	signOut(authService)
+// 	.then(()=>{
+// 		signupContainer.style.display = 'none';
+// 		signInForm.style.display = 'flex';
+// 		window.location.href = "login.html";
+// 	})
+// 	.catch((error) => console.log(error.message))
+// }
 
 // signoutBtn.addEventListener('click', (e)=>{
 // 	e.preventDefault();
