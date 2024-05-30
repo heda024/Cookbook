@@ -1,6 +1,6 @@
 import firebaseConfig from "./firebaseConfig"
 import { initializeApp } from "firebase/app"
-import { getAuth, createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword} from "firebase/auth"
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth"
 
 // INITIALIZE FIREBASE
 initializeApp(firebaseConfig)
