@@ -14,7 +14,7 @@ const mealItem = document.querySelector('.meal-item')
 
 // Event listener sign out
 signOutBtn.addEventListener('click', () => {
-	window.location.href = "login.html"; 
+	window.location.href = "index.html"; 
 })
 // Event listener search function
 searchBtn.addEventListener('click', getSearchResults)
